@@ -6,6 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+      screens: {
+        sm: "540px",
+        md: "720px",
+        lg: "960px",
+        xl: "960px",
+        "2xl": "960px",
+      },
+    },
   },
   plugins: [],
 };
