@@ -1,0 +1,20 @@
+.articleCard {
+  border: 1px solid var(--color-card-border);
+  border-radius: 4px;
+  display: flex;
+}
+
+.articleCardThumb {
+  width: 192px;
+}
+.articleCardDesc {
+  flex: 1;
+  margin-right: 1rem;
+  color: #9ca3af;
+}
+.articleCardTitle {
+  color: var(--color-gray-500);
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
