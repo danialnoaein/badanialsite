@@ -8,12 +8,11 @@ const Layout = (props) => {
       <header>
         <div className={`${classes.brand}`}>
           <Link href='/'>
-            <>
-              <div style={{ fontSize: "2rem" }}>بادانیال</div>
-              <div style={{ fontSize: "12px", marginTop: "12px", color: "" }}>
-                - BaDanial -\
-              </div>
-            </>
+            <a className={`${classes.brandPersian}`}>بادانیال</a>
+          </Link>
+          <br />
+          <Link href='/'>
+            <a className={`${classes.brandEn}`}>BaDanial</a>
           </Link>
         </div>
         <Navigation />

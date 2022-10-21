@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body,
 div,
@@ -85,6 +88,7 @@ video {
 body {
   font-family: "Vazir", Tahoma;
   line-height: 1;
+  direction: rtl;
 }
 
 article,
@@ -175,4 +179,7 @@ select {
 
   --color-primary-500: #3b82f6;
   --color-card-border: #f7f7f7;
+}
+a {
+  transition: all 0.3s ease;
 }
