@@ -1,9 +1,13 @@
+import Head from "next/head";
 import ArticleCard from "../components/articles/ArticleCard";
 import { getAllArticles } from "../data/articles";
 
 const Home = (props) => {
   return (
     <>
+      <Head>
+        <title>بادانیال - BaDanial : آموزش برنامه نویسی</title>
+      </Head>
       <div className='container mt-8'>
         <div>آخرین نوشته ها</div>
         <div>
