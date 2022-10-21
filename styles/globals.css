@@ -87,7 +87,7 @@ video {
 }
 body {
   font-family: "Vazir", Tahoma;
-  line-height: 1;
+  line-height: 1.6;
   direction: rtl;
 }
 
@@ -176,9 +176,8 @@ select {
 }
 :root {
   --color-gray-500: #4b5563;
-
   --color-primary-500: #3b82f6;
-  --color-card-border: #f7f7f7;
+  --color-card-border: #ebebeb;
 }
 a {
   transition: all 0.3s ease;
