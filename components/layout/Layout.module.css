@@ -1,6 +1,6 @@
 .brand {
   text-align: center;
-  padding: 32px 0;
+  padding: 16px 0;
   color: var(--color-gray-500);
 }
 .brand a {
@@ -16,7 +16,6 @@
 }
 .brandEn {
   font-size: 12px;
-  margin-top: 12px;
   color: #9ca3af;
 }
 .brandEn:hover {
