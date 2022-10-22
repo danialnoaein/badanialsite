@@ -5,17 +5,20 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   return (
     <>
-      <header>
-        <div className={`${classes.brand}`}>
-          <Link href='/'>
-            <a className={`${classes.brandPersian}`}>بادانیال</a>
-          </Link>
-          <br />
-          <Link href='/'>
-            <a className={`${classes.brandEn}`}>BaDanial</a>
-          </Link>
+      <header className={`${classes.header}`}>
+        <div className='container flex justify-between'>
+          <div>
+            <Link href='/'>
+              <a className={`${classes.brandPersian}`}>بادانیال</a>
+            </Link>
+            {/* <br />
+            <Link href='/'>
+              <a className={`${classes.brandEn}`}>BaDanial</a>
+            </Link> */}
+          </div>
+
+          <Navigation />
         </div>
-        <Navigation />
       </header>
 
       <main>{props.children}</main>

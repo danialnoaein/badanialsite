@@ -3,11 +3,11 @@ import classes from "./Navigation.module.css";
 const Navigation = () => {
   return (
     <nav className={`text-center ${classes.nav}`}>
-      <ul>
+      <ul className='flex'>
         <li>
-          <Link href='/'>نوشته ها</Link>
-          <Link href='/resume'>رزومه</Link>
-          <Link href='/contact'>تماس با من</Link>
+          <Link href='/'>نوشته ها 📝</Link>
+          <Link href='/resume'>رزومه 💪</Link>
+          <Link href='/contact'>تماس با من ☎️</Link>
         </li>
       </ul>
     </nav>
