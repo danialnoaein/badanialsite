@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = "";
+let assetPrefix = "/";
 let basePath = "/";
 
 if (isGithubActions) {
@@ -11,8 +11,6 @@ if (isGithubActions) {
 }
 
 module.exports = {
-  assetPrefix: assetPrefix,
-  basePath: basePath,
   reactStrictMode: true,
   swcMinify: true,
   images: {
