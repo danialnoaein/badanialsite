@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Card from "../../components/common/Card";
-import { getAllArticles } from "../../data/articles";
+import { getAllArticles, getSingleArticle } from "../../data/articles";
 const Article = (props) => {
   const [title, setTitle] = useState(props.article.title);
   const [poster, setPoster] = useState(props.article.poster);
