@@ -1,19 +1,11 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import Card from "../../components/common/Card";
 import { getAllArticles } from "../../data/articles";
 const Article = (props) => {
-  const router = useRouter();
-  const { slug } = router.query;
-  console.log(slug);
-  const title = "fsdlka fjaskld;f as";
-  if (slug) {
-    const articleId = slug.substr(0, slug.indexOf("-"));
-    console.log(articleId);
-  }
-
-  console.log(props);
-
+  const [title, setTitle] = useState(props.article.title);
+  const [poster, setPoster] = useState(props.article.poster);
   return (
     <>
       <Head>
@@ -22,7 +14,7 @@ const Article = (props) => {
       <div className='container mt-8'>
         <Card>
           <div className='text-4xl text-center font-bold'>{title}</div>
-          <div>{}</div>
+          <div>{poster}</div>
           <div>text</div>
           <div>rate</div>
         </Card>
@@ -49,20 +41,12 @@ export async function getStaticPaths() {
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps({ params, preview = false }) {
   console.log("params", params);
-  const { data: articles, error } = await getAllArticles();
-  let allArticles = articles.map((article) => {
-    return {
-      params: {
-        slug: `${article.id}-${article.slug}`,
-        title: article.title,
-        poster: article.poster,
-        text: article.text,
-      },
-    };
-  });
+  const { data: article, error } = await getSingleArticle(
+    params.slug.substr(0, params.slug.indexOf("-"))
+  );
   return {
     // Passed to the page component as props
-    props: { post: allArticles },
+    props: { article },
   };
 }
 
