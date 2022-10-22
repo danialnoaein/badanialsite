@@ -42,12 +42,12 @@ export async function getStaticPaths() {
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps({ params, preview = false }) {
   console.log("params", params);
-  const { data: article, error } = await getSingleArticle(
+  const { data, error } = await getSingleArticle(
     params.slug.substr(0, params.slug.indexOf("-"))
   );
   return {
     // Passed to the page component as props
-    props: { article },
+    props: { article: data[0] },
   };
 }
 
