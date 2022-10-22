@@ -4,6 +4,7 @@ import { useState } from "react";
 import Card from "../../components/common/Card";
 import { getAllArticles, getSingleArticle } from "../../data/articles";
 const Article = ({ article }) => {
+  console.log("article page", article);
   const [title, setTitle] = useState(article.title);
   const [poster, setPoster] = useState(article.poster);
   return (
