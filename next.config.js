@@ -17,5 +17,6 @@ module.exports = {
   swcMinify: true,
   images: {
     domains: ["dwnknioyygkqwaqvblwb.supabase.co"],
+    unoptimized: true,
   },
 };
