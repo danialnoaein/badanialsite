@@ -17,4 +17,8 @@
   font-size: 2rem;
   font-weight: bold;
   display: block;
+  font-family: "Sahel";
+}
+.articleContainerTitle {
+  font-family: "Sahel";
 }
