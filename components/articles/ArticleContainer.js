@@ -46,32 +46,6 @@ const ArticleContainer = ({ article }) => {
           />
         </div>
         <div>{artcileText}</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>text</div>
-        <div>rate</div>
       </Card>
 
       <div>

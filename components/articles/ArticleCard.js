@@ -19,7 +19,7 @@ const ArticleCard = ({ data }) => {
         <Link href={`/articles/${data.id}-${data.slug}`}>
           <a className={`${classes.articleCardTitle}`}>{data.title}</a>
         </Link>
-        <div>{data.text}</div>
+        <div>{data.breif}</div>
       </div>
     </div>
   );
