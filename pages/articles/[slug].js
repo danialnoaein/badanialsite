@@ -19,22 +19,10 @@ const Article = ({ article }) => {
 
 // Generates `/posts/1` and `/posts/2`
 export async function getStaticPaths() {
-  // const { data: articles, error } = await getAllArticles();
-  // if (error) {
-  //   console.log(error, articles);
-  // }
-
-  const articles = [
-    {
-      id: 1,
-      created_at: "2022-10-21T16:59:43+00:00",
-      title: "سلام دنیا",
-      text: "این اولین نوشته من در این سایت هست.",
-      slug: "hello-world",
-      poster:
-        "https://dwnknioyygkqwaqvblwb.supabase.co/storage/v1/object/public/images/postposters/23b382ee-4c65-4187-ac1f-2ea18fa57d24_1698x1002.webp",
-    },
-  ];
+  const { data: articles, error } = await getAllArticles();
+  if (error) {
+    console.log(error, articles);
+  }
   let allArticles = articles.map((article) => {
     return { params: { slug: `${article.id}-${article.slug}` } };
   });
@@ -47,22 +35,9 @@ export async function getStaticPaths() {
 // `getStaticPaths` requires using `getStaticProps`
 export async function getStaticProps({ params, preview = false }) {
   console.log("params", params);
-  // const { data, error } = await getSingleArticle(
-  //   params.slug.substr(0, params.slug.indexOf("-"))
-  // );
-
-  const data = [
-    {
-      id: 1,
-      created_at: "2022-10-21T16:59:43+00:00",
-      title: "سلام دنیا",
-      text: "این اولین نوشته من در این سایت هست.",
-      slug: "hello-world",
-      poster:
-        "https://dwnknioyygkqwaqvblwb.supabase.co/storage/v1/object/public/images/postposters/23b382ee-4c65-4187-ac1f-2ea18fa57d24_1698x1002.webp",
-    },
-  ];
-
+  const { data, error } = await getSingleArticle(
+    params.slug.substr(0, params.slug.indexOf("-"))
+  );
   return {
     // Passed to the page component as props
     props: { article: data[0] },
