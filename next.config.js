@@ -17,12 +17,4 @@ module.exports = {
     domains: ["dwnknioyygkqwaqvblwb.supabase.co"],
     unoptimized: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/sitemap.xml",
-        destination: "/api/sitemap",
-      },
-    ];
-  },
 };

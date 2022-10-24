@@ -9,7 +9,8 @@
     "lint": "next lint",
     "export": "next export",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.0.4",
@@ -23,6 +24,7 @@
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
     "gh-pages": "^4.0.0",
+    "next-sitemap": "^3.1.29",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.0"
   }
