@@ -5,7 +5,7 @@ import classes from "./Layout.module.css";
 const Layout = (props) => {
   return (
     <>
-      <header className={`${classes.header}`}>
+      <header className={`${classes.header} sticky top-0 z-10`}>
         <div className='container flex justify-between'>
           <div>
             <Link href='/'>
