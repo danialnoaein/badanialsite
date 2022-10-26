@@ -12,7 +12,7 @@ const Resume = () => {
         <title>بادانیال - BaDanial : رزومه</title>
       </Head>
       <div
-        className='container mt-8'
+        className='container'
         style={{ direction: "ltr" }}
       >
         <Card>
@@ -67,7 +67,7 @@ const Resume = () => {
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             SUMMARY
           </div>
@@ -83,7 +83,7 @@ const Resume = () => {
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             PROFESSIONAL EXPERIENCE
           </div>
@@ -95,80 +95,80 @@ const Resume = () => {
                     <span className='font-bold text-xl mr-4'>Kareto</span>
                     Iran, Ahvaz
                   </div>
-                  <div> Apr 2020 – Present</div>
+                  <div className='text-gray-500'> Apr 2020 – Present</div>
                 </div>
                 <div className='ml-4'>
-                  <div className='font-bold'>Technical Team Lead</div>
+                  <div className='font-bold mt-1'>Technical Team Lead</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
-                  <div className='font-bold'>FrontEnd Developer</div>
+                  <div className='font-bold mt-1'>FrontEnd Developer</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
-                  <div className='font-bold'>Android Developer</div>
+                  <div className='font-bold mt-1'>Android Developer</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
                 </div>
               </li>
-              <li>
+              <li className='mt-4'>
                 <div className='flex'>
                   <div className='flex-1 font-bold text-xl'>
                     iPino, Iran, Tehran
                   </div>
-                  <div>Mar 2018 – Feb 2020</div>
+                  <div className='text-gray-500'>Mar 2018 – Feb 2020</div>
                 </div>
                 <div className='ml-4'>
-                  <div className='font-bold'>FrontEnd Developer</div>
+                  <div className='font-bold mt-1'>FrontEnd Developer</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
                 </div>
               </li>
-              <li>
+              <li className='mt-4'>
                 <div className='flex'>
                   <div className='flex-1 font-bold text-xl'>
                     Arsalweb Startup Development CO, Iran, Ahvaz
                   </div>
-                  <div>May 2016 – Mar 2018</div>
+                  <div className='text-gray-500'>May 2016 – Mar 2018</div>
                 </div>
                 <div className='ml-4'>
-                  <div className='font-bold'>Android Developer</div>
+                  <div className='font-bold mt-1'>Android Developer</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
                 </div>
               </li>
-              <li>
+              <li className='mt-4'>
                 <div className='flex'>
                   <div className='flex-1 font-bold text-xl'>
                     Artman Web, Iran, Ahvaz
                   </div>
-                  <div>May 2016 – Mar 2018</div>
+                  <div className='text-gray-500'>May 2016 – Mar 2018</div>
                 </div>
                 <div className='ml-4'>
-                  <div className='font-bold'>Front-End Developer</div>
+                  <div className='font-bold mt-1'>Front-End Developer</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
                   </ul>
                 </div>
               </li>
-              <li>
+              <li className='mt-4'>
                 <div className='flex'>
                   <div className='flex-1 font-bold text-xl'>
                     Infinity Codes, Iran, Tehran
                   </div>
-                  <div>Aug 2015 – Nov 2015</div>
+                  <div className='text-gray-500'>Aug 2015 – Nov 2015</div>
                 </div>
                 <div className='ml-4'>
-                  <div className='font-bold'>Intern</div>
+                  <div className='font-bold mt-1'>Intern</div>
                   <ul className='list-disc ml-4'>
                     <li>TODO 1</li>
                     <li>TODO 2</li>
@@ -181,7 +181,7 @@ const Resume = () => {
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             HONORS & AWARDS
           </div>
@@ -202,54 +202,44 @@ const Resume = () => {
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             EDUCATION
           </div>
-          <div>
+          <div className='mb-2'>
             <div className='flex'>
               <div className='flex-1 font-bold text-xl'>
-                2nd place at Sharif mobile programming marathon
+                Lorestan University
               </div>
-              <div>Jan 2018</div>
+              <div>Aug 2016</div>
             </div>
-            <div>Issued by Sharif University of Technology</div>
+            <div>Bachelor of Computer Software Engineering</div>
+          </div>
+          <div className='mb-2'>
+            <div className='flex'>
+              <div className='flex-1 font-bold text-xl'>Laitec</div>
+              <div>Jan 2015</div>
+            </div>
+            <div>Web Development II</div>
             <Link
-              href={`http://mpm.sharif.ir/mpm5/`}
-              title={`http://mpm.sharif.ir/mpm5/`}
+              href={`https://laitec.ir/certification-verification/show/KydRoPReQR`}
+              title={`Credential ID 2015-1-3931`}
             />
           </div>
-          <div>
+          <div className='mb-2'>
             <div className='flex'>
               <div className='flex-1 font-bold text-xl'>
-                2nd place at Sharif mobile programming marathon
+                Rayzan Samaneh Gostar
               </div>
-              <div>Jan 2018</div>
+              <div>Mar 2019</div>
             </div>
-            <div>Issued by Sharif University of Technology</div>
-            <Link
-              href={`http://mpm.sharif.ir/mpm5/`}
-              title={`http://mpm.sharif.ir/mpm5/`}
-            />
-          </div>
-          <div>
-            <div className='flex'>
-              <div className='flex-1 font-bold text-xl'>
-                2nd place at Sharif mobile programming marathon
-              </div>
-              <div>Jan 2018</div>
-            </div>
-            <div>Issued by Sharif University of Technology</div>
-            <Link
-              href={`http://mpm.sharif.ir/mpm5/`}
-              title={`http://mpm.sharif.ir/mpm5/`}
-            />
+            <div>Professional Scrum Master I</div>
           </div>
         </Card>
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             SKILLS
           </div>
@@ -274,9 +264,7 @@ const Resume = () => {
                 Jest
               </li>
               <li>
-                <span className='font-bold inline-block'>
-                  CI/CD ‐ Platforms:
-                </span>{" "}
+                <span className='font-bold inline-block'>CI/CD Platforms:</span>{" "}
                 Docker, Gitlab CI/CD,
               </li>
 
@@ -301,7 +289,7 @@ const Resume = () => {
 
         <Card>
           <div
-            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2`}
+            className={`text-2xl font-bold border-b border-solid border-gray-200 mb-2 uppercase`}
           >
             Hobbies & Interests
           </div>
