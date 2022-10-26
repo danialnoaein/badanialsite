@@ -9,7 +9,9 @@ const Layout = (props) => {
         <div className='container flex justify-between'>
           <div>
             <Link href='/'>
-              <a className={`${classes.brandPersian}`}>بادانیال</a>
+              <a className={`${classes.brandPersian} max-[540px]:pr-4`}>
+                بادانیال
+              </a>
             </Link>
             {/* <br />
             <Link href='/'>
