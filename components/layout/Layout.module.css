@@ -28,3 +28,9 @@
 .brandEn:hover {
   color: black;
 }
+
+@media print {
+  .header {
+    display: none;
+  }
+}
