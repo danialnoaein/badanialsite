@@ -1,0 +1,8 @@
+.link {
+  color: var(--color-primary-500);
+  margin: 0 4px;
+}
+.title {
+  text-decoration: underline;
+  margin: 0 2px;
+}
