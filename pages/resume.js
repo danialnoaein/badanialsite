@@ -17,11 +17,11 @@ const Resume = () => {
       >
         <Card>
           <div className='grid grid-cols-4 gap-4'>
-            <div className='max-[540px]:col-span-4'>
+            <div>
               <Image
                 src={avatar}
                 alt='Picture of the author'
-                className='rounded '
+                className='rounded'
               />
             </div>
 
@@ -92,8 +92,8 @@ const Resume = () => {
               <li>
                 <div className='flex'>
                   <div className='flex-1 '>
-                    <span className='font-bold text-xl mr-4'>Kareto</span>
-                    Iran, Ahvaz
+                    <span className='font-bold text-xl mr-2'>Kareto</span>
+                    <span className='text-gray-500'>Iran, Ahvaz</span>
                   </div>
                   <div className='text-gray-500'> Apr 2020 – Present</div>
                 </div>
@@ -117,8 +117,9 @@ const Resume = () => {
               </li>
               <li className='mt-4'>
                 <div className='flex'>
-                  <div className='flex-1 font-bold text-xl'>
-                    iPino, Iran, Tehran
+                  <div className='flex-1'>
+                    <span className='font-bold text-xl mr-2'>iPino</span>
+                    <span className='text-gray-500'>Iran, Tehran</span>
                   </div>
                   <div className='text-gray-500'>Mar 2018 – Feb 2020</div>
                 </div>
@@ -132,8 +133,11 @@ const Resume = () => {
               </li>
               <li className='mt-4'>
                 <div className='flex'>
-                  <div className='flex-1 font-bold text-xl'>
-                    Arsalweb Startup Development CO, Iran, Ahvaz
+                  <div className='flex-1'>
+                    <span className='font-bold text-xl mr-2'>
+                      Arsalweb Startup Development CO
+                    </span>
+                    <span className='text-gray-500'>Iran, Ahvaz</span>
                   </div>
                   <div className='text-gray-500'>May 2016 – Mar 2018</div>
                 </div>
@@ -147,8 +151,9 @@ const Resume = () => {
               </li>
               <li className='mt-4'>
                 <div className='flex'>
-                  <div className='flex-1 font-bold text-xl'>
-                    Artman Web, Iran, Ahvaz
+                  <div className='flex-1'>
+                    <span className='font-bold text-xl mr-2'>Artman Web</span>
+                    <span className='text-gray-500'>Iran, Ahvaz</span>
                   </div>
                   <div className='text-gray-500'>May 2016 – Mar 2018</div>
                 </div>
@@ -162,8 +167,11 @@ const Resume = () => {
               </li>
               <li className='mt-4'>
                 <div className='flex'>
-                  <div className='flex-1 font-bold text-xl'>
-                    Infinity Codes, Iran, Tehran
+                  <div className='flex-1'>
+                    <span className='font-bold text-xl mr-2'>
+                      Infinity Codes
+                    </span>
+                    <span className='text-gray-500'>Iran, Tehran</span>
                   </div>
                   <div className='text-gray-500'>Aug 2015 – Nov 2015</div>
                 </div>
@@ -206,7 +214,7 @@ const Resume = () => {
           >
             EDUCATION
           </div>
-          <div className='mb-2'>
+          <div>
             <div className='flex'>
               <div className='flex-1 font-bold text-xl'>
                 Lorestan University
@@ -215,7 +223,7 @@ const Resume = () => {
             </div>
             <div>Bachelor of Computer Software Engineering</div>
           </div>
-          <div className='mb-2'>
+          <div className='mt-2'>
             <div className='flex'>
               <div className='flex-1 font-bold text-xl'>Laitec</div>
               <div>Jan 2015</div>
@@ -226,7 +234,7 @@ const Resume = () => {
               title={`Credential ID 2015-1-3931`}
             />
           </div>
-          <div className='mb-2'>
+          <div className='mt-2'>
             <div className='flex'>
               <div className='flex-1 font-bold text-xl'>
                 Rayzan Samaneh Gostar
