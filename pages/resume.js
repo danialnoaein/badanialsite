@@ -72,8 +72,8 @@ const Resume = () => {
             SUMMARY
           </div>
           <div>
-            Software developer with 8+ years of experience in developing Android
-            and FrontEnd web applications. Experienced in building PWA with high
+            Software developer with 7+ years of experience in building FrontEnd
+            web and Android applications. Experienced in building PWA with high
             compatibility with old and modern browsers. Seeking to leverage my
             technical and creative abilities to solve problems and turn them
             into practical software. My experience includes leading teams of
@@ -104,17 +104,45 @@ const Resume = () => {
                       Led development team of 5 to create the app, including
                       frontend and backend
                     </li>
-                    <li>TODO 2</li>
+                    <li>
+                      Worked in an agile environment with stand-ups, kept track
+                      of user stories/bugs in Trello, and conducted 2 hours of
+                      sprint planning and sprint retrospectives every two weeks
+                    </li>
+                    <li>
+                      Implemented GitLab CI to allow easy production iteration
+                    </li>
                   </ul>
                   <div className='font-bold mt-1'>FrontEnd Developer</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>
+                      Used understanding of JavaScript & React fundamentals to
+                      build the PWA for high Accessibility
+                    </li>
+                    <li>
+                      Monitored and improved the app performance up to 40%
+                      decrease of page load time
+                    </li>
+                    <li>
+                      Troubleshooted, fixed 500+ bugs and other issues, and
+                      updated throughout production lifecycle with TypeScript
+                    </li>
+                    <li>
+                      Trained 2 less experienced FrontEnd colleagues and guided
+                      them through React library (with Redux) and pair
+                      programming
+                    </li>
+                    <li>
+                      Wrote unit tests in Jest to ensure code was tested and
+                      100% bug free
+                    </li>
                   </ul>
                   <div className='font-bold mt-1'>Android Developer</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>
+                      Built a simple Android app that has a WebView to load
+                      React app
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -129,8 +157,19 @@ const Resume = () => {
                 <div className='ml-4'>
                   <div className='font-bold mt-1'>FrontEnd Developer</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>
+                      Designed the database and used Node.js for backend with
+                      +40K DAU
+                    </li>
+                    <li>Built an Android app for end users</li>
+                    <li>
+                      Developed main website frontend to online doctor
+                      appointment booking for +500 doctors
+                    </li>
+                    <li>
+                      Mentored 2 team members to achieve professional growth and
+                      learning basic programming concepts and web development
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -147,8 +186,14 @@ const Resume = () => {
                 <div className='ml-4'>
                   <div className='font-bold mt-1'>Android Developer</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>
+                      Developed an app for real estate agency that presented
+                      estates to user in 3D view
+                    </li>
+                    <li>
+                      Increased speed 30% by refactoring http request handling
+                      of an Android app
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -163,8 +208,28 @@ const Resume = () => {
                 <div className='ml-4'>
                   <div className='font-bold mt-1'>Front-End Developer</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>Refactored 3 Wordpress themes to meet SEO standards</li>
+                  </ul>
+                </div>
+              </li>
+              <li className='mt-4'>
+                <div className='flex'>
+                  <div className='flex-1'>
+                    <span className='font-bold text-xl mr-2'>KWPA</span>
+                    <span className='text-gray-500'>Iran, Ahvaz</span>
+                  </div>
+                  <div className='text-gray-500'>Feb 2016 – Apr 2016</div>
+                </div>
+                <div className='ml-4'>
+                  <div className='font-bold mt-1'>Intern</div>
+                  <ul className='list-disc ml-4'>
+                    <li>
+                      Implemented +20 templates for all new website that based
+                      on a custom CMS
+                    </li>
+                    <li>
+                      Use D3.js for organization charts that have +300 employees
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -181,8 +246,10 @@ const Resume = () => {
                 <div className='ml-4'>
                   <div className='font-bold mt-1'>Intern</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
-                    <li>TODO 2</li>
+                    <li>
+                      Convert PSD format UIs to HTML and CSS templates for
+                      building Wordpress themes
+                    </li>
                   </ul>
                 </div>
               </li>
