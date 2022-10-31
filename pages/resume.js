@@ -100,7 +100,10 @@ const Resume = () => {
                 <div className='ml-4'>
                   <div className='font-bold mt-1'>Technical Team Lead</div>
                   <ul className='list-disc ml-4'>
-                    <li>TODO 1</li>
+                    <li>
+                      Led development team of 5 to create the app, including
+                      frontend and backend
+                    </li>
                     <li>TODO 2</li>
                   </ul>
                   <div className='font-bold mt-1'>FrontEnd Developer</div>
