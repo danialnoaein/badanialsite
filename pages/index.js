@@ -9,9 +9,9 @@ const Home = (props) => {
   useEffect(() => {
     const getA = async () => {
       const { data, error } = await getAllArticles();
-      setArticles(data);
-      setError(error);
-      console.log(data);
+      //setArticles(data);
+      //setError(error);
+      //console.log(data);
     };
     getA();
   }, []);
