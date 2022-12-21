@@ -1,20 +1,50 @@
+import { ApolloClient, gql, InMemoryCache, useQuery } from "@apollo/client";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import ArticleCard from "../components/articles/ArticleCard";
+import client from "../data/apollo-client";
 import { getAllArticles } from "../data/articles";
 
+
+
+const GET_LOCATIONS = gql`
+query MyQuery {
+    articles {
+      id
+      slug
+      thumbnail {
+        id
+        fileName
+        url
+      }
+      title
+      content {
+        html
+      }
+    }  
+  }
+  
+`;
+
+
+
 const Home = (props) => {
-  const [articles, setArticles] = useState(props.allArticles);
-  const [error, setError] = useState(props.error);
-  useEffect(() => {
-    const getA = async () => {
-      const { data, error } = await getAllArticles();
-      //setArticles(data);
-      //setError(error);
-      //console.log(data);
-    };
-    getA();
-  }, []);
+  const [articles, setArticles] = useState(props.articles);
+
+  // useEffect(() => {
+  //   const getA = async () => {
+  //     const { data, error } = await getAllArticles();
+  //     //setArticles(data);
+  //     //setError(error);
+  //     console.log(data ,error);
+  //   };
+  //   getA();
+  // }, []);
+
+
+
+  const { loading, error, data } = useQuery(GET_LOCATIONS);
+
   return (
     <>
       <Head>
@@ -24,8 +54,8 @@ const Home = (props) => {
         <div>آخرین نوشته ها</div>
         <div>
           {error && <div>Error</div>}
-          {!error &&
-            articles.map((article) => (
+          {data &&
+            data.articles.map((article) => (
               <ArticleCard
                 key={article.id}
                 data={article}
@@ -37,10 +67,17 @@ const Home = (props) => {
   );
 };
 export async function getStaticProps() {
-  const { data: allArticles, error } = await getAllArticles();
-  console.log(allArticles, error);
+
+  const { data } = await client.query({
+    query: GET_LOCATIONS,
+  });
+
   return {
-    props: { allArticles, error },
-  };
+    props: {
+      articles: data.articles,
+    },
+ };
+  
+  
 }
 export default Home;

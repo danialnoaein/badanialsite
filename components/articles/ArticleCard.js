@@ -7,7 +7,7 @@ const ArticleCard = ({ data }) => {
     <div className={`${classes.articleCard} p-2 my-3 bg-white`}>
       <div className={`${classes.articleCardThumb}  max-[600px]:hidden `}>
         <Image
-          src={data.poster}
+          src={data.thumbnail.url}
           alt={data.title}
           width={192}
           height={192}
@@ -19,7 +19,7 @@ const ArticleCard = ({ data }) => {
         <Link href={`/articles/${data.id}-${data.slug}`}>
           <a className={`${classes.articleCardTitle}`}>{data.title}</a>
         </Link>
-        <div>{data.breif}</div>
+        <div>{data.content.html.replace(/<\/?[^>]+(>|$)/g, "").slice(0,400) }{`...`}<Link href={`/articles/${data.id}-${data.slug}`}>ادامه</Link></div>
       </div>
     </div>
   );

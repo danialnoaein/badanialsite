@@ -1,14 +1,36 @@
+import { gql, useQuery } from "@apollo/client";
 import { supabase } from "./supabaseClient";
 
 export const getAllArticles = async () => {
   try {
-    let { data, error } = await supabase.from("Articles").select("*");
+    //let { data, error } = await supabase.from("Articles").select("*");
+   
+
+    const GET_LOCATIONS = gql`
+    query {
+        articles {
+          id
+          slug
+          thumbnail {
+            id
+            fileName
+            url
+          }
+          title
+          content {
+            html
+          }
+        }  
+      }
+      
+    `;
+    const { loading, error, data } = useQuery(GET_LOCATIONS);
+
     return {
       data,
       error,
     };
   } catch (error) {
-    console.log(error);
     return { error };
   }
 };

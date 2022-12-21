@@ -5,12 +5,12 @@ import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 
 const ArticleContainer = ({ article }) => {
-  console.log("RUN ArticleContainer", article.text);
+  console.log("RUN ArticleContainer", article);
   const [artcileText, setArticleText] = useState();
   const [headings, setHeadings] = useState([]);
   useEffect(() => {
     console.log("RUN USEEFFECT");
-    let t = parse(article.text, {
+    let t = parse(article.content.html, {
       replace: (domNode) => {
         if (domNode.name === "h2") {
           console.log("RUN");
@@ -32,9 +32,9 @@ const ArticleContainer = ({ article }) => {
         >
           {article.title}
         </div>
-        <div style={{ margin: "0 -20px" }}>
+        <div style={{ margin: "0 -16px" }}>
           <Image
-            src={article.poster}
+            src={article.thumbnail.url}
             alt={article.title}
             width={700}
             height={475}
