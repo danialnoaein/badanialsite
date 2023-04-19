@@ -9,8 +9,7 @@
     "lint": "next lint",
     "export": "next export",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "postbuild": "next-sitemap"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@apollo/client": "^3.7.2",
@@ -20,8 +19,7 @@
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "whatwg-fetch": "^3.6.2",
-    "next-sitemap": "^3.1.29"
+    "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
