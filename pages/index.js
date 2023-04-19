@@ -5,10 +5,8 @@ import ArticleCard from "../components/articles/ArticleCard";
 import client from "../data/apollo-client";
 import { getAllArticles } from "../data/articles";
 
-
-
 const GET_LOCATIONS = gql`
-query MyQuery {
+  query MyQuery {
     articles {
       id
       slug
@@ -21,12 +19,9 @@ query MyQuery {
       content {
         html
       }
-    }  
+    }
   }
-  
 `;
-
-
 
 const Home = (props) => {
   const [articles, setArticles] = useState(props.articles);
@@ -41,25 +36,21 @@ const Home = (props) => {
   //   getA();
   // }, []);
 
-
-
   const { loading, error, data } = useQuery(GET_LOCATIONS);
 
+  console.log(loading);
   return (
     <>
       <Head>
         <title>بادانیال - BaDanial : آموزش برنامه نویسی</title>
       </Head>
-      <div className='container mt-8'>
+      <div className="container mt-8">
         <div>آخرین نوشته ها</div>
         <div>
           {error && <div>Error</div>}
           {data &&
             data.articles.map((article) => (
-              <ArticleCard
-                key={article.id}
-                data={article}
-              />
+              <ArticleCard key={article.id} data={article} />
             ))}
         </div>
       </div>
@@ -67,7 +58,6 @@ const Home = (props) => {
   );
 };
 export async function getStaticProps() {
-
   const { data } = await client.query({
     query: GET_LOCATIONS,
   });
@@ -76,8 +66,6 @@ export async function getStaticProps() {
     props: {
       articles: data.articles,
     },
- };
-  
-  
+  };
 }
 export default Home;
