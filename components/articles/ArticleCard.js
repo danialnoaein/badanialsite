@@ -16,10 +16,14 @@ const ArticleCard = ({ data }) => {
         />
       </div>
       <div className={`${classes.articleCardDesc}`}>
-        <Link href={`/articles/${data.id}-${data.slug}`}>
+        <Link href={`/articles/${data.slug}`}>
           <a className={`${classes.articleCardTitle}`}>{data.title}</a>
         </Link>
-        <div>{data.content.html.replace(/<\/?[^>]+(>|$)/g, "").slice(0,400) }{`...`}<Link href={`/articles/${data.id}-${data.slug}`}>ادامه</Link></div>
+        <div>
+          {data.content.html.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 400)}
+          {`...`}
+          <Link href={`/articles/${data.slug}`}>ادامه</Link>
+        </div>
       </div>
     </div>
   );
