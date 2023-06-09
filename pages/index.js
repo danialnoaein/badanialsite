@@ -44,20 +44,23 @@ const Home = (props) => {
       <Head>
         <title>بادانیال - BaDanial : آموزش برنامه نویسی</title>
       </Head>
-      <div className="container mt-8">
+      <div className='container mt-8'>
         <div>آخرین نوشته ها</div>
         <div>
           {error && <div>Error</div>}
           {data &&
             data.articles.map((article) => (
-              <ArticleCard key={article.id} data={article} />
+              <ArticleCard
+                key={article.id}
+                data={article}
+              />
             ))}
         </div>
       </div>
     </>
   );
 };
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query({
     query: GET_LOCATIONS,
   });

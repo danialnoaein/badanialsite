@@ -22,39 +22,39 @@ const Article = ({ article }) => {
 };
 
 // Generates `/posts/1` and `/posts/2`
-export async function getStaticPaths() {
-  const GET_LOCATIONS = gql`
-    query MyQuery {
-      articles {
-        id
-        slug
-        thumbnail {
-          id
-          fileName
-          url
-        }
-        title
-        content {
-          html
-        }
-      }
-    }
-  `;
+// export async function getStaticPaths() {
+//   const GET_LOCATIONS = gql`
+//     query MyQuery {
+//       articles {
+//         id
+//         slug
+//         thumbnail {
+//           id
+//           fileName
+//           url
+//         }
+//         title
+//         content {
+//           html
+//         }
+//       }
+//     }
+//   `;
 
-  const { data } = await client.query({
-    query: GET_LOCATIONS,
-  });
-  let allArticles = data.articles.map((article) => {
-    return { params: { slug: `${article.slug}` } };
-  });
-  return {
-    paths: allArticles,
-    fallback: false, // can also be true or 'blocking'
-  };
-}
+//   const { data } = await client.query({
+//     query: GET_LOCATIONS,
+//   });
+//   let allArticles = data.articles.map((article) => {
+//     return { params: { slug: `${article.slug}` } };
+//   });
+//   return {
+//     paths: allArticles,
+//     fallback: false, // can also be true or 'blocking'
+//   };
+// }
 
 // `getStaticPaths` requires using `getStaticProps`
-export async function getStaticProps({ params, preview = false }) {
+export async function getServerSideProps({ params, preview = false }) {
   const slug = params.slug;
   const query = gql`
     query ($slug: String) {
