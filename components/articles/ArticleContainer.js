@@ -25,8 +25,8 @@ const ArticleContainer = ({ article }) => {
   }, [article.text]);
 
   return (
-    <div className='container grid grid-cols-4 gap-4 mt-8'>
-      <Card className='col-span-3'>
+    <div className='container flex mt-8'>
+      <Card className='flex-1'>
         <div
           className={`text-4xl text-center font-bold mb-4 ${classes.articleContainerTitle}`}
         >
@@ -49,7 +49,7 @@ const ArticleContainer = ({ article }) => {
       </Card>
 
       <div>
-        <div className='sticky top-0 p-4'>
+        <div className='md:sticky top-0 p-4 hidden md:block'>
           <ul className='list-disc'>
             {headings.map((heading, index) => {
               return (

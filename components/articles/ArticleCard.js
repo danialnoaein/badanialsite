@@ -4,7 +4,7 @@ import classes from "./Articles.module.css";
 
 const ArticleCard = ({ data }) => {
   return (
-    <div className={`${classes.articleCard} p-2 my-3 bg-white`}>
+    <div className={`${classes.articleCard} p-2 my-3 bg-white mx-2`}>
       <div className={`${classes.articleCardThumb}  max-[600px]:hidden `}>
         <Image
           src={data.thumbnail.url}

@@ -38,7 +38,6 @@ const Home = (props) => {
 
   const { loading, error, data } = useQuery(GET_LOCATIONS);
 
-  console.log(loading);
   return (
     <>
       <Head>
@@ -46,6 +45,7 @@ const Home = (props) => {
       </Head>
       <div className='container mt-8'>
         <div>آخرین نوشته ها</div>
+        {loading && <div>Loading</div>}
         <div>
           {error && <div>Error</div>}
           {data &&
@@ -60,7 +60,7 @@ const Home = (props) => {
     </>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: GET_LOCATIONS,
   });
