@@ -32,7 +32,7 @@ const Navigation = () => {
       {windowDimensions.width < 540 && (
         <>
           <div
-            className='text-3xl p-4'
+            className="text-3xl p-4"
             onClick={() => setShowMenu((prev) => !prev)}
           >
             {showMenu ? "❌" : "🍔"}
@@ -45,13 +45,14 @@ const Navigation = () => {
           >
             <ul>
               <li onClick={() => setShowMenu((prev) => !prev)}>
-                <Link href='/'>نوشته ها 📝</Link>
+                <Link href="/learning">آموزش 📝</Link>
               </li>
               <li onClick={() => setShowMenu((prev) => !prev)}>
-                <Link href='/resume'>رزومه 💪</Link>
+                <Link href="/services">خدمات 🤝🏼</Link>
               </li>
+
               <li onClick={() => setShowMenu((prev) => !prev)}>
-                <Link href='/contact'>تماس با من ☎️</Link>
+                <Link href="/contact">تماس با من ☎️</Link>
               </li>
             </ul>
           </nav>
@@ -61,13 +62,13 @@ const Navigation = () => {
         <nav className={`text-center ${classes.nav}`}>
           <ul>
             <li>
-              <Link href='/'>نوشته ها 📝</Link>
+              <Link href="/learning">آموزش 📝</Link>
             </li>
             <li>
-              <Link href='/resume'>رزومه 💪</Link>
+              <Link href="/services">خدمات 🤝🏼</Link>
             </li>
             <li>
-              <Link href='/contact'>تماس با من ☎️</Link>
+              <Link href="/contact">تماس با من ☎️</Link>
             </li>
           </ul>
         </nav>
